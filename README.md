@@ -1,2 +1,2 @@
 # Projects
-This are my latest python projects
+In this folder you are gonna find some of my coding projects
