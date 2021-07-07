@@ -4,7 +4,7 @@ Created on Sat Feb 20 10:08:32 2021
 
 @author: paolo
 """
-
+# Mio progetto universitario sviluppato durante il corso di python
 import re
 
 def es1(ftesto):
@@ -20,9 +20,9 @@ def es1(ftesto):
         while line == '\n':                         # salto le linee vuote seguenti
             line = f.readline()
         while line != '\n':                         # e tengo solo le parole
-            parole.append(line.strip())             # togliendo accapi e spazi iniziali
+            parole.append(line.strip())             # togliendo l'andare a capo e gli spazi iniziali
             line = f.readline()
-                                                    # il seguito non interessa
+                                                   
     parole_rev = list(map(lambda x: x[::-1], parole))   # costruisco le parole rovesciate
     biparole = parole + parole_rev                  # d'ora in poi cerco entrambe
     biparole.sort()
@@ -37,7 +37,7 @@ def es1(ftesto):
     biparole.sort(key=lambda x: (-len(x),x))
     matrice = ''.join(matrice)                      # lascio la matrice come una stringa
     # print(matrice, '\n\n', biparole)
-    cerca = re.compile('('+('|'.join(biparole))+')')    # re per cercare le parole
+    cerca = re.compile('('+('|'.join(biparole))+')')    # re. per cercare le parole
     marcate = [ [c] for c in matrice ]              # lista di caratteri che indicano quali lettere restano
     #print(''.join([c[0] for c in marcate]))
     process_dritta(cerca, matrice, marcate, biparole)         # cerco le parole nella matrice normale
