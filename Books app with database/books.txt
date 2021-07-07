@@ -1,0 +1,3 @@
+Storia,    Guiso,   True
+Psicologia,   Leone, True
+Diritto pubblico,  Romano,  False
